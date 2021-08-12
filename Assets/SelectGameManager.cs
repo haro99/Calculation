@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public enum Grade {
     easy,
-    normal
+    normal,
+    Hand
 };
 public class SelectGameManager : MonoBehaviour
 {
@@ -27,6 +28,6 @@ public class SelectGameManager : MonoBehaviour
     {
         grade = (Grade)number;
         Debug.Log(grade);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 }
