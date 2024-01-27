@@ -28,11 +28,14 @@ public class GameManager : MonoBehaviour
     delegate void SomeDelegate();
     SomeDelegate QuestionUpdate;
 
-
+    /// <summary>
+    /// 難易度チェック
+    /// </summary>
     private void Awake()
     {
         mode = Mode.Stop;
 
+        //難易度によって問題生成関数を設定する
         if (SelectGameManager.grade == Grade.easy)
         {
             QuestionUpdate = OneQuestionUpdate;
@@ -49,7 +52,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
 
         counttext.text = question.ToString() + "/50問";
 
@@ -70,6 +72,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 問題生成（答えが一桁問題）
+    /// </summary>
     void OneQuestionUpdate()
     {
         int setnumber, setnumber2;
@@ -100,6 +105,10 @@ public class GameManager : MonoBehaviour
         //Debug.Log(setnumber + setnumber2);
         ButtonDisplay(true);
     }
+
+    /// <summary>
+    /// 問題生成（答えが二桁問題）
+    /// </summary>
     void DoubleQuestionUpdate()
     {
         int setnumber, setnumber2;
@@ -133,6 +142,9 @@ public class GameManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// 問題生成（答えが三桁問題）
+    /// </summary>
     void HardQuestionUpdate()
     {
         int setnumber, setnumber2;
@@ -167,6 +179,11 @@ public class GameManager : MonoBehaviour
         int count = (right == 0) ? 1 : ((int)Mathf.Log10(right) + 1);
         Debug.Log(count);
     }
+
+    /// <summary>
+    /// 答えと解答のチェック
+    /// </summary>
+    /// <param name="setnumber"></param>
     public void CheckAnswer(int setnumber)
     {
         answer *= 10;
@@ -180,6 +197,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 問題カウント処理
+    /// </summary>
     void QuestionCountDown()
     {
         question++;
@@ -199,12 +219,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 解答の前の削除
+    /// </summary>
     public void Back()
     {
         answer /= 10;
         answertext.text = answer.ToString();
     }
 
+    /// <summary>
+    /// リザルト処理
+    /// </summary>
     void ResultFunction()
     {
         if (score > 10800)
@@ -238,6 +264,10 @@ public class GameManager : MonoBehaviour
         ResultMenu.SetActive(true);
     }
 
+    /// <summary>
+    /// スタート合図
+    /// </summary>
+    /// <returns></returns>
     IEnumerator Starting()
     {
         yield return new WaitForSeconds(1.5f);
@@ -246,6 +276,10 @@ public class GameManager : MonoBehaviour
         mode = Mode.Play;
     }
 
+    /// <summary>
+    /// 正解・不正解処理
+    /// </summary>
+    /// <returns></returns>
     IEnumerator AnswerShow()
     {
         if (right == answer)
@@ -285,6 +319,10 @@ public class GameManager : MonoBehaviour
         QuestionCountDown();
     }
 
+    /// <summary>
+    /// ボタン有効・無効処理
+    /// </summary>
+    /// <param name="set"></param>
     public void ButtonDisplay(bool set)
     {
         for (int i = 0; i < Buttons.Length; i++)
@@ -293,25 +331,29 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// シーンの切り替え
+    /// </summary>
+    /// <param name="number"></param>
     public void SceneLoad(int number)
     {
         SceneManager.LoadScene(number);
     }
 
-    public void Entyo()
-    {
-        limit = 5;
-        limittext.text = ((int)limit).ToString();
-        stop = true;
-    }
+    //public void Entyo()
+    //{
+    //    limit = 5;
+    //    limittext.text = ((int)limit).ToString();
+    //    stop = true;
+    //}
 
-    public void Ranking()
-    {
-        Debug.Log("ランキング");
-        if (SelectGameManager.grade == Grade.easy)
-            naichilab.RankingLoader.Instance.SendScoreAndShowRanking(score, 0);
-        else if(SelectGameManager.grade==Grade.normal)
-            naichilab.RankingLoader.Instance.SendScoreAndShowRanking(score, 1);
+    //public void Ranking()
+    //{
+    //    Debug.Log("ランキング");
+    //    if (SelectGameManager.grade == Grade.easy)
+    //        naichilab.RankingLoader.Instance.SendScoreAndShowRanking(score, 0);
+    //    else if(SelectGameManager.grade==Grade.normal)
+    //        naichilab.RankingLoader.Instance.SendScoreAndShowRanking(score, 1);
 
-    }
+    //}
 }
