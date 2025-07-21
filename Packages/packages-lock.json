@@ -12,18 +12,6 @@
       "source": "builtin",
       "dependencies": {}
     },
-<<<<<<< HEAD
-    "com.unity.ads": {
-      "version": "3.7.5",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
-=======
->>>>>>> uniryversionup
     "com.unity.analytics": {
       "version": "3.6.12",
       "depth": 0,
@@ -34,19 +22,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-<<<<<<< HEAD
-      "version": "1.14.18",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-=======
       "version": "1.15.12",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.services.core": "1.0.1"
       },
->>>>>>> uniryversionup
       "url": "https://packages.unity.com"
     },
     "com.unity.ext.nunit": {
@@ -57,11 +38,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
-<<<<<<< HEAD
-      "version": "1.2.1",
-=======
+
       "version": "2.0.7",
->>>>>>> uniryversionup
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -70,11 +48,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-<<<<<<< HEAD
-      "version": "2.0.15",
-=======
+
       "version": "2.0.14",
->>>>>>> uniryversionup
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -83,20 +58,13 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.vscode": {
-<<<<<<< HEAD
-      "version": "1.2.5",
-=======
+
       "version": "1.2.4",
->>>>>>> uniryversionup
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-<<<<<<< HEAD
-    "com.unity.purchasing": {
-      "version": "4.1.5",
-=======
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.0.2",
       "depth": 2,
@@ -106,34 +74,18 @@
     },
     "com.unity.purchasing": {
       "version": "4.10.0",
->>>>>>> uniryversionup
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.ugui": "1.0.0",
-<<<<<<< HEAD
-        "com.unity.services.core": "1.0.1",
-        "com.unity.modules.androidjni": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0",
-        "com.unity.modules.unityanalytics": "1.0.0",
-        "com.unity.modules.unitywebrequest": "1.0.0"
-=======
         "com.unity.modules.unitywebrequest": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0",
         "com.unity.modules.androidjni": "1.0.0",
         "com.unity.services.core": "1.8.2"
->>>>>>> uniryversionup
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.services.core": {
-<<<<<<< HEAD
-      "version": "1.0.1",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.unitywebrequest": "1.0.0"
-=======
       "version": "1.8.2",
       "depth": 1,
       "source": "registry",
@@ -141,16 +93,11 @@
         "com.unity.modules.unitywebrequest": "1.0.0",
         "com.unity.nuget.newtonsoft-json": "3.0.2",
         "com.unity.modules.androidjni": "1.0.0"
->>>>>>> uniryversionup
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
-<<<<<<< HEAD
-      "version": "1.1.31",
-=======
       "version": "1.1.29",
->>>>>>> uniryversionup
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -161,11 +108,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.textmeshpro": {
-<<<<<<< HEAD
-      "version": "2.1.4",
-=======
       "version": "3.0.6",
->>>>>>> uniryversionup
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -174,15 +117,6 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-<<<<<<< HEAD
-      "version": "1.2.18",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.audio": "1.0.0",
-        "com.unity.modules.director": "1.0.0",
-        "com.unity.modules.animation": "1.0.0",
-=======
       "version": "1.4.8",
       "depth": 0,
       "source": "registry",
@@ -190,7 +124,6 @@
         "com.unity.modules.director": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
         "com.unity.modules.audio": "1.0.0",
->>>>>>> uniryversionup
         "com.unity.modules.particlesystem": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -337,8 +270,6 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-<<<<<<< HEAD
-=======
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0",
@@ -351,7 +282,6 @@
       "source": "builtin",
       "dependencies": {
         "com.unity.modules.ui": "1.0.0",
->>>>>>> uniryversionup
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       }
